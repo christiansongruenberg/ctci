@@ -1,0 +1,15 @@
+{
+  "name": "ctci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --watch ./**/*__test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "mocha": "^3.4.2"
+  }
+}
