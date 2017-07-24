@@ -16,8 +16,10 @@ const tests = [
     }
 ]
 
-describe("compress(string)", function(){
+describe("1.6 compress(string)", function(){
     tests.forEach(function(test){
-        it(`compress('${test.string}') = '${test.answer}'`)
+        it(`compress('${test.string}') = '${test.answer}'`, function(){
+            expect(compress(test.string)).to.equal(test.answer)
+        })
     })
 })
