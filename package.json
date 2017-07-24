@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --watch ./**/*__test.js"
+    "test": "mocha --compilers js:babel-core/register --watch ./src/**/*.test.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.0"
   }
 }
