@@ -5,6 +5,7 @@ export function LinkedList(){
     this.add = function(value){
         if(this.head === null){
             this.head = new Node(value)
+            return
         }
 
         let tail = goToTail(this)
@@ -21,11 +22,21 @@ export function LinkedList(){
         return currNode
     }
 
+    this.getTail = function(){
+        let currNode = this.head
+        
+        while(currNode.next !== null){
+            currNode = currNode.next
+        }
+
+        return currNode
+    }
+
     this.printAsArray = function(){
         let currNode = this.head;
         let arr = []
 
-        while(currNode.getNext() !== null){
+        while(currNode !== null){
             arr.push(currNode.getValue())
             currNode = currNode.next
         }

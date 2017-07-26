@@ -76,12 +76,24 @@ describe.only('LinkedList', function(){
 
         let currNode = ll.head;
         let count = 0;
-        console.log(ll.printAsArray())
         while(currNode !== null ){
             expect(currNode.value).to.equal(values[count])
             currNode = currNode.next;
             count++
         }
-        
+
+    })
+    
+    it('getTail returns tail', function(){
+        let ll = new LinkedList
+
+        const values = [1,2,3]
+        values.forEach(function(v){
+            ll.add(v)
+        })
+
+        let currNode = ll.head;
+        let count = 0;
+        expect(ll.getTail().value).to.equal(values[values.length - 1])   
     })
 })
