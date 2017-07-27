@@ -56,7 +56,7 @@ describe('Node Class', function(){
     
 })
 
-describe.only('LinkedList', function(){
+describe('LinkedList', function(){
     it('adding to empty linked list sets it to head', function(){
         let ll = new LinkedList
 
@@ -95,5 +95,16 @@ describe.only('LinkedList', function(){
         let currNode = ll.head;
         let count = 0;
         expect(ll.getTail().value).to.equal(values[values.length - 1])   
+    })
+
+    it('appendArray adds the array to the LinkedList', function(){
+        let ll = new LinkedList;
+        let arr = [1,2,3,4,5,6,7]
+        let arr2 = [8,9,10,11]
+
+        ll.appendArray(arr)
+        ll.appendArray(arr2)
+
+        expect(ll.printAsArray()).to.eql(arr.concat(arr2))
     })
 })

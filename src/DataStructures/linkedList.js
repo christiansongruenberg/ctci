@@ -32,6 +32,13 @@ export function LinkedList(){
         return currNode
     }
 
+
+    this.appendArray = function(arr){
+        arr.forEach(function(value){
+            this.add(value)
+        }.bind(this))
+    }
+
     this.printAsArray = function(){
         let currNode = this.head;
         let arr = []
