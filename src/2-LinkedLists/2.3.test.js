@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import { LinkedList } from '../DataStructures/linkedList'
 import { deleteNode } from "./2.3"
 
-describe.only("2.3 Delete any node thats not the tail or head and only have access to the node", function(){
+describe("2.3 Delete any node thats not the tail or head and only have access to the node", function(){
     it("Deletes a middle node", function(){
         let ll = new LinkedList
 
