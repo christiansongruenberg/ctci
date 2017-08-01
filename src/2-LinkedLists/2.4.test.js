@@ -2,11 +2,11 @@ import { expect } from 'chai'
 import { partition } from './2.4'
 import { LinkedList } from '../DataStructures/linkedList'
 
-describe.only("partition", function(){
+describe("partition", function(){
     it("seperates lower than x and higher than x", function(){
         let ll = new LinkedList
 
-        let values = [9, 7, 4, 5, 1, 3, 8, 9 ,10 ,5, 12]
+        let values = [9, 7, 4, 5, 1, 3, 8, 9 ,10 ,5, 12, 3]
         let x = 8;
         ll.appendArray(values)
 

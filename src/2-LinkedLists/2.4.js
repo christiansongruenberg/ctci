@@ -1,36 +1,39 @@
 export function partition(ll, x){
     let lessThanTail = null;
+    let prevNode = null;
     let currNode = ll.head
     //check head first
     if(currNode.value < x) {
         lessThanTail = ll.head
     }
 
-    while(currNode.next !== null){
-        if(currNode.next.value < x){
-            //when first node is less tahn x
+    while(currNode !== null){
+        let nextNode = currNode.next
+        if(currNode.value < x){
+            //when first node is less than x
             if(lessThanTail === null){
-                let tempNode = currNode.next;
-                currNode.next = currNode.next.next;
-                
-                tempNode.next = ll.head;
-                ll.head = tempNode
-                lessThanTail = ll.head
+                if(currNode === ll.head){
+                    //if the first less than node is the head
+                    lessThanTail = ll.head
+                    prevNode = ll.head
+                }else {
+                    let tempNode = currNode
+                    prevNode.next = nextNode
+                    currNode.next = ll.head;
+                    ll.head = currNode
+                }
             } else {
-                let tempNode = currNode.next;
-                currNode.next = currNode.next.next; 
-                
+                let tempNode = currNode;
+                prevNode.next = nextNode
                 tempNode.next = lessThanTail.next
-                lessThanTail.next = tempNode
-
                 lessThanTail = tempNode
                 
             }
+        } else {
+            prevNode = currNode
         }
 
-        currNode = currNode.next
+        currNode = nextNode
     }
-
-    console.log(ll.printAsArray())
     return ll
 }
