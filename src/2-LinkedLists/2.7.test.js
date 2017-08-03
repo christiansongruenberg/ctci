@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import { intersects } from './2.7'
 import { LinkedList } from '../DataStructures/linkedList'
 
-describe.only('intersects() returns if the 2 linked lists intersect', function(){
+describe('intersects() returns if the 2 linked lists intersect', function(){
     it('finds 2 intersecting linkedlists', function(){
         let ll1 = new LinkedList
         let ll2 = new LinkedList

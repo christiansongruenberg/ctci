@@ -8,7 +8,7 @@ export function LinkedList(){
             return
         }
 
-        let tail = goToTail(this)
+        let tail = this.goToTail()
         tail.next = new Node(value)
     }
 
@@ -18,8 +18,8 @@ export function LinkedList(){
         this.head = newNode
     }
 
-    function goToTail(list){
-        let currNode = list.head
+    this.goToTail = function(){
+        let currNode = this.head
         
         while(currNode.getNext() !== null) {
             currNode = currNode.getNext()

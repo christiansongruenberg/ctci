@@ -29,7 +29,7 @@ export function intersects(ll1, ll2){
             }
         
         }else if(length2 > length1){
-            //step ll2 forward
+            //step ll2 forwardz
             startNode2 = startNode2.next
         }
 
