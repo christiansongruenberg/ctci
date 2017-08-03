@@ -12,6 +12,12 @@ export function LinkedList(){
         tail.next = new Node(value)
     }
 
+    this.prepend = function(value){
+        let newNode = new Node(value)
+        newNode.next = this.head
+        this.head = newNode
+    }
+
     function goToTail(list){
         let currNode = list.head
         

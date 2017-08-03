@@ -107,4 +107,15 @@ describe('LinkedList', function(){
 
         expect(ll.printAsArray()).to.eql(arr.concat(arr2))
     })
+
+    it('prepend() adds value to the beginning', function(){
+        let ll = new LinkedList
+        let values = [2,3,4,5]
+        ll.appendArray(values)
+        expect(ll.printAsArray()).to.eql(values)
+        
+        let prependVal = 1
+        ll.prepend(prependVal)
+        expect(ll.printAsArray()).to.eql([prependVal,...values])
+    })
 })

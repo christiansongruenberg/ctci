@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import { sumList } from './2.5'
 import { LinkedList } from '../DataStructures/linkedList'
 
-describe.only('2.5 sumList() sums linked list', function(){
+describe('2.5 sumList() sums linked list', function(){
     it('sums 2 lists', function(){
         let value1 = [3, 4, 8]
         let value2 = [9, 3, 4, 4]
