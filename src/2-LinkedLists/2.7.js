@@ -25,12 +25,23 @@ export function intersects(ll1, ll2){
         if(length1 > length2){
             //step ll1 forward
             for(let i = 0; i < diff; i++){
-                
+                startNode1 = startNode1.next
             }
         
         }else if(length2 > length1){
             //step ll2 forward
+            startNode2 = startNode2.next
         }
+
+        while(startNode2 !== null && startNode1 !== null){
+            if(startNode1 == startNode2){
+                return startNode1
+            }
+            startNode1 = startNode1.next
+            startNode2 = startNode2.next
+        }
+
+        return false
     }else {
         //they arent intersecting
 
