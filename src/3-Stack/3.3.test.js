@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import SetOfStacks from './3.3'
 
-describe.only('SetOfStacks starts a new stack after hitting a threshold', function(){
+describe('SetOfStacks starts a new stack after hitting a threshold', function(){
     it('its API works just like a normal stack', function(){
         let stack = new SetOfStacks(3)
 
