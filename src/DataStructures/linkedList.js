@@ -38,6 +38,31 @@ export function LinkedList(){
         return currNode
     }
 
+    this.removeIndex = function(index){
+        
+        //remove head if index 0
+        if(index == 0){
+            this.head = this.head.next
+            return
+        }
+
+        //go to node at index
+        let currNode = this.head;
+        let prevNode = null;
+        for(let i = 0; i < index; i++){
+            prevNode = currNode;
+            currNode = currNode.next;
+
+            //return if index is larger than the linkedList
+            if(currNode == null){
+                return
+            }
+        }
+
+        prevNode.next = currNode.next
+        return currNode
+    }
+
 
     this.appendArray = function(arr){
         arr.forEach(function(value){

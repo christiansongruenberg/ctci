@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import { sortStack } from './3.5'
 import { Stack } from '../DataStructures/stack'
 
-describe.only('sortStack sorts the stack to have the smallest at the top', function(){
+describe('sortStack sorts the stack to have the smallest at the top', function(){
     it('sorts the stack', function(){
         let stack = new Stack
         let values = [1,7,5,6,3,9]

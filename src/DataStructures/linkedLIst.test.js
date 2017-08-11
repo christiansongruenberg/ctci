@@ -118,4 +118,14 @@ describe('LinkedList', function(){
         ll.prepend(prependVal)
         expect(ll.printAsArray()).to.eql([prependVal,...values])
     })
+
+    it('removeIndex removes at index', function(){
+        let ll = new LinkedList;
+        let arr = [1,2,3,4,5,6,7]
+        ll.appendArray(arr)
+        let removed = ll.removeIndex(2)
+
+        expect(ll.printAsArray()).to.eql([1,2,4,5,6,7])
+        expect(removed.value).to.equal(3)
+    })
 })
