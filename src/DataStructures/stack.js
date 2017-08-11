@@ -12,4 +12,8 @@ export function Stack(){
     this.pushArray = function(arr){
         this.stack = [...this.stack, ...arr]
     }
+
+    this.peek = function(){
+        return this.stack[this.stack.length - 1]
+    }
 }
