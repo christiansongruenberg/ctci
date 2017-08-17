@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import AnimalShelter, { Dog, Cat } from './3.6'
 
-describe.only('AnimalShelter', function(){
+describe('AnimalShelter', function(){
     
     let shelter;
     let animals
