@@ -23,6 +23,10 @@ export class Graph {
         this.idCount++
         return newNode
     }
+
+    getNode(id){
+        return this.nodes[id]
+    }
 }
 
 export class Node {
