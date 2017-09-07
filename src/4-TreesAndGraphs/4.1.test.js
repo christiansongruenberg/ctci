@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import { Graph } from '../DataStructures/graph'
 import { isConnected } from './4.1'
 
-describe.only('isConnected checks if 2 nodes are connected', function(){
+describe('isConnected checks if 2 nodes are connected', function(){
     it('returns true for 2 connected nodes', function(){
         const nodeData = [
             'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'
